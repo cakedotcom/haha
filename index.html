@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="main.css"/>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              screens: {
+                //breakpoints
+                'xs': '320px',   
+                'md': '375px',
+                'l': '425px',
+                'tablet': '768px',   
+                'laptop': '1024px',   
+                '4k': '2560px', 
+              },
+            },
+          },
+        };
+    </script>
+
+    <style>
+        input {
+            border-style: none;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(134, 20, 20);
+            
+        }
+
+        input::placeholder {
+            color: rgb(255, 0, 0);
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        #login-button {
+            box-shadow: 0 0 5px 2px rgba(255, 79, 79, 0.726);
+        }
+
+        button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+    <body class="bg-[url('netflix-bg.jpg')] bg-cover bg-center h-screen w-full">
+        <div class="container laptop:flex">
+            <div class="flex flex-col justify-center items-center mt-12 ">
+                <img class="w-56 h-20" src="netflix-logo.png" alt="logo">
+                <p class="text-gray-50 text-sm">Watch TV shows & movies.</p>
+                <p class="text-gray-50 text-sm">Anywhere, anytime.</p>
+            </div>
+
+            <form action="">
+                <div class="flex flex-col justify-center items-center mt-20 gap-3">
+                <input class=" text-gray-50"  type="text" placeholder="Username">
+                <input class="text-gray-50" type="password" placeholder="Password">
+                <a class="text-gray-50 text-xs" href="">Forgot password?</a>
+                </div>
+
+                <div class="flex flex-col justify-center items-center gap-1 mt-28">
+                    <button id="login-button" class="text-gray-50 bg-red-700 px-16 py-2 flex items-center justify-center transform hover:scale-105 transition duration-300" type="submit">Log In</button>
+                    <button class="text-gray-50 text-xs bg-slate-700 px-16 py-2 flex items-center justify-center transform hover:scale-105 transition duration-300">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
